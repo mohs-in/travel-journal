@@ -1,70 +1,53 @@
 * {
-  box-sizing: border-box;
+  margin: 0;
 }
 
 body {
   font-size: 16px;
 }
 
-/* .main--component {
+.main--component {
+  height: auto;
+  width: 94%;
   font-family: 'Inter', sans-serif;
   margin: 3% 3%;
-  width: 638px;
-  height: 846px;
   box-shadow: 0px 0px 3px #212121;
-} */
+}
 
-/* .final-score {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
-/* .header {
+.header {
   background-color: #F55A5A;
-  margin-bottom: 2.5em;
-} */
+  margin: 0 0 2.5em 0;
+}
 
-/* .header--title {
+.header--title {
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  width: 638px;
   height: 55px;
   color: #fff;
   font-weight: 400;
   font-size: 0.9rem;
   letter-spacing: -0.075em;
   margin-bottom: 0.625em;
-} */
-
-/* .tile--component {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  width: 546px;
-  height: 232px;
-  margin-left: 2.5em;
-  margin-top: 0.75em;
-} */
-/*
-.tile--content {
-  margin-top: 0;
-  margin-left: 1.56em;
-  width: 326px;
-  height: 187px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink:initial;
 }
+
+.tile--component {
+  display: grid;
+  grid-template: auto auto / repeat(3, 1fr);
+  margin-top: 0.75em;
+}
+
 .tile--img > img {
-  width: 145px;
-  height: 210px;
+  width: 100px;
+  height: 150px;
+  margin-left: 1.25em;
 } 
+
+.tile--content {
+  grid-column: span 2;
+  margin: .5em ;
+}
 
 .tileContent--loc {
   display: inline-flex;
@@ -75,16 +58,9 @@ body {
   margin-bottom: 0;
 }
 
-.tileContent--loc > img {
-  width: 9px;
-  height: 11.55px;
-}
-
 .tileContent--loc--country {
-  letter-spacing: 0.17em;
-  margin-top: 1.25em;
-  margin-left: .3125em;
-  margin-right: 0.625em;
+  margin-left: .5em;
+  margin-right: 2em;
 }
 
 .tileContent--loc > a {
@@ -94,98 +70,77 @@ body {
 .tileContent--title {
   font-size: 1.56rem;
   font-weight: 600;
-  line-height: 0;
+  margin: .5em 0;
 }
 
 .tileContent--date {
-  font-size: .64rem;
-  font-weight: 700;
-  line-height: 0;
+  font-size: .75rem;
 }
 
 .tileContent--text {
+  grid-column: span 3;
+  padding: .75em 1.5em 1.75em 1.5em;
+  font-size: .8rem;
   color: #2B283A;
   line-height: 150%;
-  font-size: .64rem;
-} */
+}
 
- @media (max-width:480px) {
-  * {
-    margin: 0;
-  }
-
+ @media (min-width:480px) {
   .main--component {
-    height: auto;
-    width: 94%;
-    font-family: 'Inter', sans-serif;
-    margin: 3% 3%;
-    box-shadow: 0px 0px 3px #212121;
+    width: 638px;
+    height: 846px;  
   }
 
-  .header {
-    background-color: #F55A5A;
-    margin-bottom: 2.5em;
-    margin: 0;
+  .final-score {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .header--title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    height: 55px;
-    color: #fff;
-    font-weight: 400;
-    font-size: 0.9rem;
-    letter-spacing: -0.075em;
-    margin-bottom: 0.625em;
+    width: 638px;
   }
 
   .tile--component {
-    display: grid;
-    grid-template: auto auto / repeat(3, 1fr);
-    margin-top: 0.75em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 546px;
+    height: 232px;
+    margin-left: 2.5em;
   }
 
   .tile--content {
-    margin: 0;
-    grid-column: span 2;
-    margin: .5em ;
-  }
-
-  .tileContent--title {
-    font-size: 1.56rem;
-    font-weight: 600;
-    margin: .5em 0;
-  }
-
-  .tileContent--date {
-    font-size: .75rem;
-  }
-
-  .tileContent--loc {
-    display: inline-flex;
-    flex-direction: row;
-    font-size: 0.64rem;
-    align-items: center;
     margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  .tileContent--loc--country {
-    margin-left: .5em;
-    margin-right: 2em;
-  }
-
-  .tileContent--text {
-    grid-column: span 3;
-    padding: .75em 1.5em 1.75em 1.5em;
-    font-size: .8rem;
+    margin-left: 1.56em;
+    width: 326px;
+    height: 187px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink:initial;
   }
 
   .tile--img > img {
-    width: 100px;
-    height: 150px;
-    margin-left: 1.75em;
+    width: 145px;
+    height: 210px;
   } 
+
+  .tileContent--loc > img {
+    width: 9px;
+    height: 11.55px;
+  }
+
+  .tileContent--loc--country {
+    letter-spacing: 0.17em;
+    margin: 1.25em 0.625em 0 .3125em;
+  }
+
+  .tileContent--date {
+    font-size: .64rem;
+    font-weight: 700;
+    line-height: 0;
+  }
  }
