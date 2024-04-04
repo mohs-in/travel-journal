@@ -59,6 +59,7 @@ body {
 }
 
 .tileContent--loc--country {
+  letter-spacing: 0.17em;
   margin-left: .5em;
   margin-right: 2em;
 }
@@ -88,7 +89,7 @@ body {
  @media (min-width:480px) {
   .main--component {
     width: 638px;
-    height: 846px;  
+    height: auto;  
   }
 
   .final-score {
@@ -97,50 +98,24 @@ body {
     align-items: center;
   }
 
-  .header--title {
-    width: 638px;
-  }
-
-  .tile--component {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 546px;
-    height: 232px;
-    margin-left: 2.5em;
-  }
-
-  .tile--content {
-    margin-top: 0;
-    margin-left: 1.56em;
-    width: 326px;
-    height: 187px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-shrink:initial;
-  }
-
   .tile--img > img {
     width: 145px;
     height: 210px;
   } 
 
-  .tileContent--loc > img {
-    width: 9px;
-    height: 11.55px;
+  .tile--component {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 1em;
   }
 
-  .tileContent--loc--country {
-    letter-spacing: 0.17em;
-    margin: 1.25em 0.625em 0 .3125em;
+  .tile--content,
+  .tileContent--text {
+    grid-column:2;
+    grid-column: span 2;
   }
 
-  .tileContent--date {
-    font-size: .64rem;
-    font-weight: 700;
-    line-height: 0;
+  .tile--img {
+    grid-row: span 3;
   }
  }
