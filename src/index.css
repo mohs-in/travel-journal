@@ -180,6 +180,7 @@ body {
   .tileContent--text {
     grid-column: span 3;
     padding: .75em 1.5em 1.75em 1.5em;
+    font-size: .8rem;
   }
 
   .tile--img > img {
